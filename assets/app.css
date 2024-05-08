@@ -558,13 +558,10 @@ video {
   left: 50%;
 }
 .top-16 {
-  top: 4rem;
+  top: 6.4rem;
 }
 .isolate {
   isolation: isolate;
-}
-.z-10 {
-  z-index: 10;
 }
 .mx-auto {
   margin-left: auto;
@@ -586,7 +583,7 @@ video {
   display: none;
 }
 .w-10 {
-  width: 2.5rem;
+  width: 4rem;
 }
 .min-w-\[160px\] {
   min-width: 160px;
@@ -606,8 +603,8 @@ video {
 }
 .space-x-5 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
-  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
-  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(2rem * var(--tw-space-x-reverse));
+  margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .truncate {
   overflow: hidden;
@@ -626,16 +623,16 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 .py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
 }
 .py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .text-left {
   text-align: left;
