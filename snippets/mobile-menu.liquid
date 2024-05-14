@@ -1,7 +1,8 @@
 <div
   class="fixed inset-0 overflow-hidden z-20"
-  x-cloak
   x-data="{ isOpenMenu : false }"
+  :class="isOpenMenu ? '' : 'hidden'"
+  x-cloak
   x-show="isOpenMenu"
   x-show="false"
   @toggle-menu.window="isOpenMenu = !isOpenMenu"
@@ -81,7 +82,7 @@
                       x-cloak
                       class="{% if has_sub_menu %} has-sub-menu {% endif %}"
                     >
-                      <div class="flex justify-between items-center" :class="{ 'menu-active': openSubMenu }">
+                      <div class="flex justify-between items-center" :class="{ 'menu-active': openSubMenu }" x-transition>
                         <a
                           href="{{ link.url }}"
                           class="w-1/2 py-3 text-base inline-flex items-center"

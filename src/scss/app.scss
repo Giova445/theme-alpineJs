@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+[x-cloak] { 
+    display: none !important; 
+}
 .header {
     display: grid;
     grid-template-areas: "header-logo header-menu header-icons";
