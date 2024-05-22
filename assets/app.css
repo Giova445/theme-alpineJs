@@ -602,6 +602,15 @@ video {
 .mt-6 {
   margin-top: 2.4rem;
 }
+.mb-2 {
+  margin-bottom: 0.8rem;
+}
+.mt-2 {
+  margin-top: 0.8rem;
+}
+.mt-8 {
+  margin-top: 3.2rem;
+}
 .block {
   display: block;
 }
@@ -672,8 +681,14 @@ video {
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
 .flex-col {
   flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 .items-center {
   align-items: center;
@@ -681,13 +696,24 @@ video {
 .justify-end {
   justify-content: flex-end;
 }
+.justify-center {
+  justify-content: center;
+}
 .justify-between {
   justify-content: space-between;
+}
+.gap-4 {
+  gap: 1.6rem;
 }
 .space-x-5 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
   margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.8rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.8rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .overflow-hidden {
   overflow: hidden;
@@ -743,11 +769,21 @@ video {
   padding-top: 2.4rem;
   padding-bottom: 2.4rem;
 }
+.py-2 {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
 .pl-2 {
   padding-left: 0.8rem;
 }
 .pt-4 {
   padding-top: 1.6rem;
+}
+.pb-6 {
+  padding-bottom: 2.4rem;
+}
+.pt-8 {
+  padding-top: 3.2rem;
 }
 .text-left {
   text-align: left;
@@ -765,6 +801,17 @@ video {
 .text-sm {
   font-size: 1.4rem;
   line-height: 2rem;
+}
+.text-3xl {
+  font-size: 3rem;
+  line-height: 3.6rem;
+}
+.text-lg {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+.font-medium {
+  font-weight: 500;
 }
 .uppercase {
   text-transform: uppercase;
@@ -925,5 +972,13 @@ video {
 
   .md\:max-w-md {
     max-width: 28rem;
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
   }
 }
