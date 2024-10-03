@@ -1,0 +1,294 @@
+<style>
+
+.testimonial-wrapper {
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  h2 {
+    text-align: center;
+  }
+  padding: 7rem 2rem;
+}
+
+.testimonial-content {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.customer-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.customer-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.customer-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.testimonial-date {
+  color: #65676B;
+  font-size: 13px;
+  margin: 0;
+}
+
+.testimonial-text {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 12px 0;
+  color: #050505;
+}
+
+.social-info {
+  display: flex;
+  gap: 15px;
+  font-size: 13px;
+  color: #65676B;
+  padding: 10px 0;
+  border-bottom: 1px solid #CED0D4;
+}
+
+.social-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.btn-like,
+.btn-comment,
+.btn-share {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  color: #65676B;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.btn-like:hover,
+.btn-comment:hover,
+.btn-share:hover {
+  background-color: #F2F2F2;
+  border-radius: 4px;
+}
+
+/* Swiper specific styles */
+.swiper-container {
+  width: 100%;
+}
+
+.testimonial-slide {
+  background: white;
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .testimonial-wrapper {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+  .testimonial-wrapper {
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .swiper-container {
+    display: block; /* Swiper only on mobile */
+  }
+
+
+  .social-info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+}
+
+/* Grid display for larger screens */
+@media (min-width: 768px) {
+  .swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .testimonial-slide {
+    max-width: 30%; /* 3 slides per row */
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  .social-actions {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+  }
+}
+</style>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<div class="testimonial-wrapper">
+  <h2>Comentarios de Facebook:</h2>
+  <div class="swiper-container testimonial-slider swiper">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+      <div class="swiper-slide testimonial-slide">
+        <div class="testimonial-content">
+          <div class="customer-info">
+            {% if block.settings.testimonial_image %}
+              <img src="{{ block.settings.testimonial_image | img_url: '100x100' }}" alt="{{ block.settings.customer_name }}" class="customer-img">
+            {% endif %}
+            <h3 class="customer-name">{{ block.settings.customer_name }}</h3>
+            <p class="testimonial-date">{{ block.settings.date | default: '3d' }}</p>
+          </div>
+          <p class="testimonial-text">{{ block.settings.testimonial_text }}</p>
+          <div class="social-info">
+            <span class="likes">❤️ {{ block.settings.likes }} Likes</span>
+            <span class="comments">💬 {{ block.settings.comments }} Comments</span>
+          </div>
+        </div>
+        <div class="social-actions">
+          <button class="btn-like">Like</button>
+          <button class="btn-comment">Comment</button>
+          <button class="btn-share">Share</button>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- Swiper pagination for mobile -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const swiperContainer = document.querySelector('.testimonial-slider');
+  
+  // Function to apply flex layout for desktop
+  const applyFlexLayout = () => {
+    swiperContainer.style.display = 'flex';
+    swiperContainer.style.gap = '20px'; // Adjust spacing between elements
+    swiperContainer.style.flexWrap = 'wrap';
+  };
+
+  // Initialize Swiper for mobile devices
+  const initSwiper = () => {
+    return new Swiper('.testimonial-slider', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000,
+      },
+      autoHeight: true,
+    });
+  };
+
+  let swiper = null;
+
+  // Function to manage Swiper and layout based on screen size
+  const handleResize = () => {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth > 1024) {
+      // Destroy Swiper if it's initialized
+      if (swiper) {
+        swiper.destroy(true, true);
+        swiper = null;
+      }
+      // Apply flex layout on desktop
+      applyFlexLayout();
+    } else {
+      // Remove flex layout and initialize Swiper for mobile
+      swiperContainer.style.display = '';
+      swiperContainer.style.gap = '';
+      swiperContainer.style.flexWrap = '';
+
+      if (!swiper) {
+        swiper = initSwiper();
+      }
+    }
+  };
+
+  // Initial check and event listener for window resize
+  handleResize();
+  window.addEventListener('resize', handleResize);
+});
+</script>
+{% schema %}
+  {
+    "name": "Slider testimonios",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "testimonial",
+        "name": "Testimonial",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "testimonial_image",
+            "label": "Customer Image"
+          },
+          {
+            "type": "text",
+            "id": "customer_name",
+            "label": "Customer Name"
+          },
+          {
+            "type": "textarea",
+            "id": "testimonial_text",
+            "label": "Testimonial"
+          },
+          {
+            "type": "number",
+            "id": "likes",
+            "label": "Likes Count",
+            "default": 0
+          },
+          {
+            "type": "number",
+            "id": "comments",
+            "label": "Comments Count",
+            "default": 0
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Slider Testimonios",
+        "category": "Custom"
+      }
+    ]
+  }
+  {% endschema %}
