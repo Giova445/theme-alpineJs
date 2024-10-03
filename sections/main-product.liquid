@@ -3,6 +3,12 @@
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
   data-section="{{ section.id }}"
 >
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
   {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -113,6 +119,56 @@
                   </div>
                   <span class="rating-number"></span>
                 </div>
+
+              {% when 'reviews-blocks' %}
+                <div class="reviews-section" style="background-color: {{ section.settings.bg_color }}; padding: 20px;">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      {%- for i in (1..section.settings.number_of_reviews) -%}
+                        <div class="swiper-slide">
+                          <div class="review-item" style="background-color: {{ section.settings.review_bg_color }}; padding: 10px; border-radius: {{ section.settings.border_radius }}px; border: 1px solid {{ section.settings.border_color }};">
+                            <!-- Author Image -->
+                            <div class="review-author">
+                              <img src="{{ section.settings.author_image | img_url: 'small' }}" alt="{{ section.settings.author_name }}" style="width: 40px; height: 40px; border-radius: 50%;">
+                              <div class="author-info">
+                                <p class="author-name" style="font-weight: bold; color: {{ section.settings.text_color }}">{{ section.settings.author_name }}</p>
+                                <p class="author-location" style="color: {{ section.settings.text_color }}">{{ section.settings.author_location }}</p>
+                              </div>
+                            </div>
+
+                            <!-- Review Text -->
+                            <p class="review-text" style="color: {{ section.settings.text_color }}">{{ section.settings.review_text }}</p>
+
+                            <!-- Review Meta (Stars and Delivery Info) -->
+                            <div class="review-meta" style="display: flex; justify-content: space-between; color: {{ section.settings.text_color }}">
+                              <span class="review-stars">
+                                {% for i in (1..section.settings.star_rating) %}
+                                  ★
+                                {% endfor %}
+                              </span>
+                              <span class="delivery-info">{{ section.settings.delivery_service }}</span>
+                            </div>
+                          </div>
+                        </div>
+                      {%- endfor -%}
+                    </div>
+                    <!-- Swiper Pagination -->
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              
+                <!-- Swiper Initialization -->
+                <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                    var swiper = new Swiper('.swiper-container', {
+                      slidesPerView: 1,
+                      pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                      },
+                    });
+                  });
+                </script>
 
               {%- when 'like-section' -%}
                 <div class="likes-section" style="background-color: {{ block.settings.bg_color }}; border-radius: {{ block.settings.border_radius }}px; border: 2px solid {{ block.settings.border_color }};">
@@ -992,6 +1048,83 @@
 
       ]
     },
+     {
+      "type": "reviews-blocks",
+      "name": "reseñas carousel",
+      "settings": [
+      {
+        "type": "number",
+        "id": "number_of_reviews",
+        "label": "Number of Reviews",
+        "default": 1
+      },
+      {
+        "type": "image_picker",
+        "id": "author_image",
+        "label": "Author Image",
+      },
+      {
+        "type": "text",
+        "id": "author_name",
+        "label": "Author Name",
+        "default": "Dora Jimenez"
+      },
+      {
+        "type": "text",
+        "id": "author_location",
+        "label": "Author Location",
+        "default": "Medellín"
+      },
+      {
+        "type": "textarea",
+        "id": "review_text",
+        "label": "Review Text",
+        "default": "Me llegó el producto super rápido, vivo en Medellín muy recomendados. Gracias"
+      },
+      {
+        "type": "range",
+        "id": "star_rating",
+        "label": "Star Rating",
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "default": 5
+      },
+      {
+        "type": "text",
+        "id": "delivery_service",
+        "label": "Delivery Service Info",
+        "default": "Entregado por Coordinadora"
+      },
+      {
+        "type": "color",
+        "id": "review_bg_color",
+        "label": "Review Background Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "range",
+        "id": "border_radius",
+        "label": "Border Radius",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "default": 10
+      },
+      {
+        "type": "color",
+        "id": "border_color",
+        "label": "Border Color",
+        "default": "#e1e1e1"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#333333"
+      }
+    ]
+     },
     {
       "type": "like-section",
       "name": "Sección me gusta",
