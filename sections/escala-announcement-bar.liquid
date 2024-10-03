@@ -1,0 +1,103 @@
+<div class="marquee" style="background-color: {{ section.settings.color_bg }}; color: {{ section.settings.color_text }}">
+  <div class="marquee-content" id="marquee-content">
+    <div class="marquee-item">
+          {%- for block in section.blocks -%}
+            {%- if block.settings.text != blank -%}
+              <span style="font-size:1.5rem; font-weight: bold">{{ block.settings.text }}</span>
+            {%- endif -%}
+          {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<style>
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background-color: black; /* Solo para visualización */
+  padding: 10px; /* Espaciado alrededor del texto */
+}
+
+.marquee-content {
+  display: flex;
+align-items:center;
+  animation: none; /* Removemos la animación CSS */
+  white-space: nowrap;
+}
+
+.marquee-item {
+  display: flex;
+  margin-left: 10px;
+  gap: 10px;
+  flex-shrink: 0; /* Evita que los elementos se compriman */
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const marqueeContent = document.getElementById("marquee-content");
+  const marqueeItem = marqueeContent.querySelector(".marquee-item");
+  const clone = marqueeItem.cloneNode(true);
+  marqueeContent.appendChild(clone);
+
+  let start = performance.now();
+  let speed = 0.06; // Píxeles por milisegundo
+
+  function step(time) {
+    let timeElapsed = time - start;
+    let move = timeElapsed * speed % marqueeItem.offsetWidth;
+    marqueeContent.style.transform = `translateX(${-move}px)`;
+    requestAnimationFrame(step);
+  }
+
+  requestAnimationFrame(step);
+});
+</script>
+
+{% schema %}
+{
+  "name": "Anuncio Rotativo",
+  "max_blocks": 12,
+  "class": "announcement-bar-section",
+
+  "settings": [
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Color de fondo",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "Color de Texto",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "t:sections.announcement-bar.blocks.announcement.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Bienvenido a Escala 100",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Anuncio Rotativo",
+      "blocks": [
+        {
+          "type": "announcement"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

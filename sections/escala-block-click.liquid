@@ -1,0 +1,42 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  function isClickAllowed(target) {
+    // Intenta encontrar el deslizador por ID
+    var slider = document.getElementById('slider-after-before');
+    // Si el deslizador existe, verifica si el clic fue dentro de este
+    if (slider && slider.contains(target)) {
+      return true; // Permite los clics en el deslizador
+    }
+    return false; // De lo contrario, no permite los clics
+  }
+
+  // Función para deshabilitar clics si no se cumplen las condiciones de permitirlos
+  function disableClicks(event) {
+    if (!isClickAllowed(event.target)) {
+      event.preventDefault();
+      event.stopPropagation(); // Detiene la propagación del evento
+    }
+  }
+
+  // Escucha para eventos de mouse down en todo el documento
+  document.addEventListener('mousedown', disableClicks, false);
+  // Previene que aparezca el menú de contexto
+  document.addEventListener('contextmenu', function(e) {
+    if (!isClickAllowed(e.target)) {
+      e.preventDefault();
+    }
+  }, false);
+});
+</script>
+
+{% schema %}
+{
+  "name": "Deshabilitar Clicks",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Dehabilitar Clicks"
+    }
+  ]
+}
+{% endschema %}

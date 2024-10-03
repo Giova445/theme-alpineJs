@@ -1,0 +1,862 @@
+
+  
+  
+      <style>
+        @font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM73w5aXw.woff) format('woff');
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WZhyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+      </style>
+    
+  <style>
+    .gps-503521575207699335 .pointer-events-auto{pointer-events:auto}.gps-503521575207699335 .relative{position:relative}.gps-503521575207699335 .mx-auto{margin-left:auto;margin-right:auto}.gps-503521575207699335 .mb-0{margin-bottom:0}.gps-503521575207699335 .block{display:block}.gps-503521575207699335 .\!inline{display:inline!important}.gps-503521575207699335 .flex{display:flex}.gps-503521575207699335 .grid{display:grid}.gps-503521575207699335 .h-full{height:100%}.gps-503521575207699335 .w-full{width:100%}.gps-503521575207699335 .max-w-full{max-width:100%}.gps-503521575207699335 .flex-col{flex-direction:column}.gps-503521575207699335 .gap-y-0{row-gap:0}.gps-503521575207699335 .transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-503521575207699335 .duration-200{transition-duration:.2s}.gps-503521575207699335 .ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-503521575207699335 .\[\&_\*\]\:max-w-full *{max-width:100%}.gps-503521575207699335 .\[\&_p\]\:inline p{display:inline}.gps-503521575207699335 .\[\&_p\]\:after\:whitespace-pre-wrap p:after{content:var(--tw-content);white-space:pre-wrap}.gps-503521575207699335 .\[\&_p\]\:after\:content-\[\'\\A\'\] p:after{--tw-content:"\A";content:var(--tw-content)}
+  </style>
+  
+      
+      
+            <section
+              class="mx-auto max-w-full"
+              style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:0px;--pl-tablet:0px;--pl-mobile:0px;--pr:0px;--pr-tablet:0px;--pr-mobile:0px"
+            >
+              
+    <div
+      id="gJ2RRLoKHh"
+        style="--pt:var(--g-s-2xl);--pb:var(--g-s-2xl);--pt-mobile:auto;--pb-mobile:auto;--d:grid;--d-tablet:grid;--d-mobile:grid;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="gJ2RRLoKHh mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="g5XCGgM9Zw relative flex flex-col"
+    >
+      
+      
+      
+    <div
+      parentTag="Col" id="g-8emrj32M"
+        style="--mb:var(--g-s-l);--d:grid;--d-tablet:grid;--d-mobile:grid;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="g-8emrj32M mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="gG1i6RvjUb relative flex flex-col"
+    >
+      <div
+    
+    role="presentation"
+    class="group/image gpzXUDsA2V"
+    style="--mb:var(--g-s-l);--mb-mobile:auto;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-1fb2bf56-7afb-4785-9cd4-baf0b6f99c40.png" | asset_url }}" data-srcset="{{ '503512329267184746-1fb2bf56-7afb-4785-9cd4-baf0b6f99c40.png' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-1fb2bf56-7afb-4785-9cd4-baf0b6f99c40.png' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-1fb2bf56-7afb-4785-9cd4-baf0b6f99c40.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--radius:var(--g-radius-none);border-radius:inherit"
+  />
+      </div>
+  </div>
+      
+      
+    <div
+      parentTag="Col" id="gWTvEfknwf"
+        style="--mb:var(--g-s-l);--mb-mobile:auto;--d:grid;--d-tablet:grid;--d-mobile:grid;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgc-mobile:#FF90AE;--bgi:url();--bgi-mobile:url();--bgp:50% 50%;--bgp-mobile:50% 50%;--bgs:cover;--bgs-mobile:cover;--bgr:no-repeat;--bgr-mobile:no-repeat;--bga:scroll;--bga-mobile:scroll"
+        class="gWTvEfknwf mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="gov1rdk4B9 relative flex flex-col"
+    >
+      <div
+    
+    role="presentation"
+    class="group/image gDdq-HwTJy"
+    style="--mb:var(--g-s-l);--mb-mobile:auto;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-6105ed1c-6431-4211-81de-eb82d4c481bb.png" | file_url }}" data-srcset="{{ '503512329267184746-6105ed1c-6431-4211-81de-eb82d4c481bb.png' | file_img_url: '768x768' }} 768w, {{ '503512329267184746-6105ed1c-6431-4211-81de-eb82d4c481bb.png' | file_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-6105ed1c-6431-4211-81de-eb82d4c481bb.png' | file_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="1056" height="487" alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:1056/487;--aspect-tablet:1056/487;--aspect-mobile:1056/487;--objf:cover;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--radius:var(--g-radius-none);border-radius:inherit"
+  />
+      </div>
+  </div>
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--ml-mobile:var(--g-s-l);--mb-mobile:var(--g-s-l);--mr-mobile:var(--g-s-l);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--ta:left"
+      data-keep-class="true"
+      class="gRi19HrUy8 "
+    ><div><script type="text/plain" class="product-json" id="product-json{{product.id}}">{{ product | json }}</script>
+<div class="_rsi-cod-form-is-gempage"></div>
+<div class="_rsi-cod-form-gempages-button-hook"></div>
+<div id="_rsi-cod-form-embed-custom-hook"></div></div></div>
+  
+    <div
+      parentTag="Col"
+        class="gswaGItQhI "
+        style="--ta:left;--mb:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="background-color:rgba(249,249,249,0);color:rgb(255,255,255);font-size:21px;">Nuestro <strong>Kit de Maquillaje</strong> está diseñado para realzar la belleza única de cada mujer</span></p></h2>
+      </div>
+    </div><div
+    
+    role="presentation"
+    class="group/image g_n3goWgZm"
+    style="--mb:var(--g-s-l);--mb-mobile:auto;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-525c7157-bbdc-466a-9d4b-d8fa5b84f24e.gif" | asset_url }}" data-srcset="{{ '503512329267184746-525c7157-bbdc-466a-9d4b-d8fa5b84f24e.gif' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-525c7157-bbdc-466a-9d4b-d8fa5b84f24e.gif' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-525c7157-bbdc-466a-9d4b-d8fa5b84f24e.gif' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--radius:var(--g-radius-none);border-radius:inherit"
+  />
+      </div>
+  </div><div
+    
+    role="presentation"
+    class="group/image gLgpAGoyVv"
+    style="--mb:var(--g-s-l);--mb-mobile:auto;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-11cd0083-f69a-42c8-af24-c79c2a131528.gif" | asset_url }}" data-srcset="{{ '503512329267184746-11cd0083-f69a-42c8-af24-c79c2a131528.gif' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-11cd0083-f69a-42c8-af24-c79c2a131528.gif' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-11cd0083-f69a-42c8-af24-c79c2a131528.gif' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--radius:var(--g-radius-none);border-radius:inherit"
+  />
+      </div>
+  </div>
+    <div
+      parentTag="Col"
+        class="g-ja7nHemh "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:var(--g-s-l);--mb-mobile:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="background-color:rgba(249,249,249,0);color:rgb(255,255,255);font-size:20px;">¿Qué incluye nuestro<strong> Kit de Maquillaje?</strong></span></p></h2>
+      </div>
+    </div><div
+    
+    role="presentation"
+    class="group/image gz5IKDi3QR"
+    style="--mb:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--bblr:16px;--bbrr:16px;--btlr:16px;--btrr:16px;--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-1a6f401d-4120-4fec-ba6c-a5064be5c1d0.gif" | asset_url }}" data-srcset="{{ '503512329267184746-1a6f401d-4120-4fec-ba6c-a5064be5c1d0.gif' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-1a6f401d-4120-4fec-ba6c-a5064be5c1d0.gif' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-1a6f401d-4120-4fec-ba6c-a5064be5c1d0.gif' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:80%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;border-radius:inherit"
+  />
+      </div>
+  </div>
+    <div
+      parentTag="Col"
+        class="gecgLnXKhq "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:var(--g-s-xs);--mb-mobile:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">1 * Balaca&nbsp;</span></p><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">1 * Encrespador de pestañas&nbsp;</span></p><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">1 * Rubor&nbsp;</span></p><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">1 * Kit de cejas</span></p><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">1 * Paleta de sombras excelente pigmentación</span></p><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">1 * Set brochas</span></p><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">1 * Brocha skincare</span></p><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">1 * Pulpo facial</span></p><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">1 * Labial doble punta liquida y en barra efecto mate</span></p><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">1 * Pestañina larga duración</span></p><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">1* Delineador en bolígrafo</span></p><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">1 * Gliter</span></p><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">1 * Set Perfiladores</span></p></h2>
+      </div>
+    </div>
+    </div>
+    </div>
+  
+    
+      
+      
+    <div
+      parentTag="Col" id="g8DS0pERu5"
+        style="--mb:var(--g-s-l);--d:grid;--d-tablet:grid;--d-mobile:grid;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="g8DS0pERu5 mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="gF6xf8b2oc relative flex flex-col"
+    >
+      
+    <div
+      parentTag="Col"
+        class="gBt-Bl7xr1 "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:var(--g-s-l);--mb-mobile:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="color:rgb(163,54,81);font-size:25px;"><strong>Resalta la Belleza Natural</strong></span></p></h2>
+      </div>
+    </div><div
+    
+    role="presentation"
+    class="group/image gsOlYFmAN1"
+    style="--mb:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--bblr:16px;--bbrr:16px;--btlr:16px;--btrr:16px;--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-5d4c1ab2-19c2-41cf-8857-7bb18cf81594.png" | asset_url }}" data-srcset="{{ '503512329267184746-5d4c1ab2-19c2-41cf-8857-7bb18cf81594.png' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-5d4c1ab2-19c2-41cf-8857-7bb18cf81594.png' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-5d4c1ab2-19c2-41cf-8857-7bb18cf81594.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:80%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;border-radius:inherit"
+  />
+      </div>
+  </div>
+    <div
+      parentTag="Col"
+        class="gq_z6wAaJ2 "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:var(--g-s-xs);--mb-mobile:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="background-color:rgb(255,255,255);color:rgb(13,13,13);font-size:19px;">Los productos incluidos en el <strong>kit </strong>están diseñados para realzar la belleza natural de cada mujer, resaltando sus <strong>mejores rasgos</strong> sin ocultar su individualidad.</span></p></h2>
+      </div>
+    </div>
+    <div
+      parentTag="Col"
+        class="gkMMgy4b5Z "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:auto;--mb-mobile:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="color:rgb(163,54,81);font-size:25px;"><strong>Variedad de Productos</strong></span></p></h2>
+      </div>
+    </div><div
+    
+    role="presentation"
+    class="group/image gtMDyvAXp1"
+    style="--mb:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--bblr:16px;--bbrr:16px;--btlr:16px;--btrr:16px;--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-8ff4a330-f570-43e8-9895-28f67cca9b91.png" | asset_url }}" data-srcset="{{ '503512329267184746-8ff4a330-f570-43e8-9895-28f67cca9b91.png' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-8ff4a330-f570-43e8-9895-28f67cca9b91.png' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-8ff4a330-f570-43e8-9895-28f67cca9b91.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:80%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;border-radius:inherit"
+  />
+      </div>
+  </div>
+    <div
+      parentTag="Col"
+        class="gQid-7LSFS "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:var(--g-s-xs);--mb-mobile:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p>Desde <strong>bases y correctores</strong> hasta sombras de ojos y labiales, este <strong>kit </strong>ofrece una amplia gama de productos para crear una variedad de looks.</p></h2>
+      </div>
+    </div>
+    <div
+      parentTag="Col"
+        class="gOOhCDw7_P "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:auto;--mb-mobile:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="color:rgb(163,54,81);font-size:25px;"><strong>Calidad Superior</strong></span></p></h2>
+      </div>
+    </div><div
+    
+    role="presentation"
+    class="group/image gDpKSCDhzo"
+    style="--mb:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--bblr:16px;--bbrr:16px;--btlr:16px;--btrr:16px;--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-81f94672-94f6-4c94-9070-ef09e0f4d615.png" | asset_url }}" data-srcset="{{ '503512329267184746-81f94672-94f6-4c94-9070-ef09e0f4d615.png' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-81f94672-94f6-4c94-9070-ef09e0f4d615.png' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-81f94672-94f6-4c94-9070-ef09e0f4d615.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:80%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;border-radius:inherit"
+  />
+      </div>
+  </div>
+    <div
+      parentTag="Col"
+        class="gk8nfGSB1c "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:var(--g-s-xs);--mb-mobile:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="background-color:rgb(255,255,255);color:rgb(13,13,13);font-size:18px;">Los productos incluidos en el <strong>kit </strong>están diseñados para realzar la belleza natural de cada mujer, resaltando sus <strong>mejores rasgos</strong> sin ocultar su individualidad.</span></p></h2>
+      </div>
+    </div>
+    <div
+      parentTag="Col"
+        class="gc12POjRSI "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:auto;--mb-mobile:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="color:rgb(163,54,81);font-size:25px;"><strong>Fácil de Usar</strong></span></p></h2>
+      </div>
+    </div><div
+    
+    role="presentation"
+    class="group/image g9Dx6AN8iG"
+    style="--mb:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--bblr:16px;--bbrr:16px;--btlr:16px;--btrr:16px;--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-b4c27b85-af75-40a9-bfb9-e0d7143559f2.png" | asset_url }}" data-srcset="{{ '503512329267184746-b4c27b85-af75-40a9-bfb9-e0d7143559f2.png' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-b4c27b85-af75-40a9-bfb9-e0d7143559f2.png' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-b4c27b85-af75-40a9-bfb9-e0d7143559f2.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:80%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;border-radius:inherit"
+  />
+      </div>
+  </div>
+    <div
+      parentTag="Col"
+        class="gvSeSgW42J "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:var(--g-s-xs);--mb-mobile:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="background-color:rgb(255,255,255);color:rgb(13,13,13);font-size:18px;">Con <strong>instrucciones </strong>claras y fáciles de seguir, este <strong>kit </strong>es perfecto tanto para principiantes como para expertos en maquillaje, haciendo que la creación de looks impresionantes sea rápida y sencilla.</span></p></h2>
+      </div>
+    </div><div
+    
+    role="presentation"
+    class="group/image gHOrD1w5MI"
+    style="--mb:var(--g-s-l);--mb-mobile:auto;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-525c7157-bbdc-466a-9d4b-d8fa5b84f24e.gif" | asset_url }}" data-srcset="{{ '503512329267184746-525c7157-bbdc-466a-9d4b-d8fa5b84f24e.gif' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-525c7157-bbdc-466a-9d4b-d8fa5b84f24e.gif' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-525c7157-bbdc-466a-9d4b-d8fa5b84f24e.gif' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--radius:var(--g-radius-none);border-radius:inherit"
+  />
+      </div>
+  </div><div
+    
+    role="presentation"
+    class="group/image gYPfdfiL2N"
+    style="--mb:var(--g-s-l);--mb-mobile:auto;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-11cd0083-f69a-42c8-af24-c79c2a131528.gif" | asset_url }}" data-srcset="{{ '503512329267184746-11cd0083-f69a-42c8-af24-c79c2a131528.gif' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-11cd0083-f69a-42c8-af24-c79c2a131528.gif' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-11cd0083-f69a-42c8-af24-c79c2a131528.gif' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--radius:var(--g-radius-none);border-radius:inherit"
+  />
+      </div>
+  </div><div
+    
+    role="presentation"
+    class="group/image gfN-NjXrgx"
+    style="--mb:var(--g-s-l);--mb-mobile:auto;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-6105ed1c-6431-4211-81de-eb82d4c481bb.png" | asset_url }}" data-srcset="{{ '503512329267184746-6105ed1c-6431-4211-81de-eb82d4c481bb.png' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-6105ed1c-6431-4211-81de-eb82d4c481bb.png' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-6105ed1c-6431-4211-81de-eb82d4c481bb.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="1056" height="487" alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:1056/487;--aspect-tablet:1056/487;--aspect-mobile:1056/487;--objf:cover;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--radius:var(--g-radius-none);border-radius:inherit"
+  />
+      </div>
+  </div>
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--ml-mobile:var(--g-s-l);--mb-mobile:var(--g-s-l);--mr-mobile:var(--g-s-l);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--ta:left"
+      data-keep-class="true"
+      class="g-vr8Jem8Z "
+    ><div><script type="text/plain" class="product-json" id="product-json{{product.id}}">{{ product | json }}</script>
+<div class="_rsi-cod-form-is-gempage"></div>
+<div class="_rsi-cod-form-gempages-button-hook"></div>
+<div id="_rsi-cod-form-embed-custom-hook"></div></div></div>
+  
+      
+      
+    <div
+      parentTag="Col" id="gZDjjTbAWQ"
+        style="--mb:var(--g-s-l);--d:grid;--d-tablet:grid;--d-mobile:grid;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:var(--g-ct-w, 100%);--bgc:transparent;--bgc-mobile:#FF90AE;--bgi:url();--bgi-mobile:url();--bgp:50% 50%;--bgp-mobile:50% 50%;--bgs:cover;--bgs-mobile:cover;--bgr:no-repeat;--bgr-mobile:no-repeat;--bga:scroll;--bga-mobile:scroll"
+        class="gZDjjTbAWQ mx-auto mb-0 grid max-w-full gap-y-0 transition-colors duration-200 ease-in-out [&_*]:max-w-full"
+    >
+    <div
+      tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="gX5IXMK2xa relative flex flex-col"
+    >
+      <div
+    
+    role="presentation"
+    class="group/image gpi-XjZNhU"
+    style="--mb:var(--g-s-l);--mt-mobile:var(--g-s-m);--mb-mobile:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--bblr:16px;--bbrr:16px;--btlr:16px;--btrr:16px;--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-fc16cf2e-0a5c-4cdf-80c2-811a6c360cc7.gif" | asset_url }}" data-srcset="{{ '503512329267184746-fc16cf2e-0a5c-4cdf-80c2-811a6c360cc7.gif' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-fc16cf2e-0a5c-4cdf-80c2-811a6c360cc7.gif' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-fc16cf2e-0a5c-4cdf-80c2-811a6c360cc7.gif' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:80%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;border-radius:inherit"
+  />
+      </div>
+  </div>
+    <div
+      parentTag="Col"
+        class="gec3KxgcY5 "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:var(--g-s-xs);--mb-mobile:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">Imagina la <strong>confianza </strong>que sentirás al lucir una piel impecable, resaltando tus mejores rasgos con nuestros productos de <strong>alta calidad.</strong></span></p></h2>
+      </div>
+    </div><div
+    
+    role="presentation"
+    class="group/image g2mIZ6pjGt"
+    style="--mb:var(--g-s-l);--mt-mobile:var(--g-s-m);--mb-mobile:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--bblr:16px;--bbrr:16px;--btlr:16px;--btrr:16px;--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-0dbe6e63-8b27-4587-9525-6bcda90bd22e.png" | asset_url }}" data-srcset="{{ '503512329267184746-0dbe6e63-8b27-4587-9525-6bcda90bd22e.png' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-0dbe6e63-8b27-4587-9525-6bcda90bd22e.png' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-0dbe6e63-8b27-4587-9525-6bcda90bd22e.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;border-radius:inherit"
+  />
+      </div>
+  </div>
+    <div
+      parentTag="Col"
+        class="gMk_yY7oHN "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:var(--g-s-xs);--mb-mobile:var(--g-s-xs);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">Desde una <strong>base </strong>que se funde perfectamente con tu <strong>tono de piel</strong> hasta sombras de ojos que realzan tus ojos, este kit te ayuda a expresar tu estilo y personalidad de manera única.</span></p></h2>
+      </div>
+    </div>
+    <div
+      parentTag="Col"
+        class="g0kDyKo3Jj "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:var(--g-s-xs);--mb-mobile:var(--g-s-xs);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">¿QUÉ ESPERAS PARA TENER TU <strong>KIT DE MAQUILLAJE?</strong></span></p></h2>
+      </div>
+    </div><div
+    
+    role="presentation"
+    class="group/image gUm2Outcyj"
+    style="--mb:var(--g-s-l);--mt-mobile:var(--g-s-m);--mb-mobile:var(--g-s-l);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--bblr:16px;--bbrr:16px;--btlr:16px;--btrr:16px;--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-d8b7ee45-61fb-4f52-968f-d9fc5b78f292.jpg" | asset_url }}" data-srcset="{{ '503512329267184746-d8b7ee45-61fb-4f52-968f-d9fc5b78f292.jpg' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-d8b7ee45-61fb-4f52-968f-d9fc5b78f292.jpg' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-d8b7ee45-61fb-4f52-968f-d9fc5b78f292.jpg' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:80%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;border-radius:inherit"
+  />
+      </div>
+  </div>
+    <div
+      parentTag="Col"
+        class="gZxVpqeKRC "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:var(--g-s-xs);--mb-mobile:var(--g-s-xs);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="background-color:rgba(255,255,255,0);color:rgb(255,255,255);font-size:19px;">No esperes más para <strong>experimentar </strong>la magia de nuestro <strong>Kit de Maquillaje</strong></span></p></h2>
+      </div>
+    </div><div
+    
+    role="presentation"
+    class="group/image g55mJ3Y9UM"
+    style="--mb:var(--g-s-l);--mb-mobile:auto;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-6105ed1c-6431-4211-81de-eb82d4c481bb.png" | asset_url }}" data-srcset="{{ '503512329267184746-6105ed1c-6431-4211-81de-eb82d4c481bb.png' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-6105ed1c-6431-4211-81de-eb82d4c481bb.png' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-6105ed1c-6431-4211-81de-eb82d4c481bb.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width="1056" height="487" alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:1056/487;--aspect-tablet:1056/487;--aspect-mobile:1056/487;--objf:cover;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--radius:var(--g-radius-none);border-radius:inherit"
+  />
+      </div>
+  </div>
+    <div
+      parentTag="Col"
+        class="g3v3Q7tzNo "
+        style="--ta:left;--mb:var(--g-s-l);--mt-mobile:var(--g-s-xs);--mb-mobile:var(--g-s-xs);--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object]"
+      >
+      <div class="flex" style="--jc:left">
+        <h2
+          data-gp-text
+          class="[&_p]:inline [&_p]:after:whitespace-pre-wrap [&_p]:after:content-['\A'] gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--ta-mobile:center;--ff:var(--g-font-Montserrat, 'Montserrat');--weight:400;--lh:130%;--size:46px;--size-tablet:46px;--size-mobile:19px;--c:var(--g-c-text-2, text-2);word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden"
+        ><p><span style="background-color:rgb(255,255,255);color:rgb(13,13,13);font-size:18px;">Haz clic en el <strong>botón de abajo👇</strong> y descubre por qué este kit es imprescindible para cualquier <strong>amante del maquillaje&nbsp;</strong></span></p></h2>
+      </div>
+    </div>
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--mt-mobile:var(--g-s-l);--ml-mobile:var(--g-s-l);--mb-mobile:var(--g-s-l);--mr-mobile:var(--g-s-l);--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--ta:left"
+      data-keep-class="true"
+      class="gXvf6KDNmb "
+    ><div><script type="text/plain" class="product-json" id="product-json{{product.id}}">{{ product | json }}</script>
+<div class="_rsi-cod-form-is-gempage"></div>
+<div class="_rsi-cod-form-gempages-button-hook"></div>
+<div id="_rsi-cod-form-embed-custom-hook"></div></div></div>
+  <div
+    
+    role="presentation"
+    class="group/image g1SYrpaC5k"
+    style="--mb:var(--g-s-l);--mb-mobile:auto;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-525c7157-bbdc-466a-9d4b-d8fa5b84f24e.gif" | asset_url }}" data-srcset="{{ '503512329267184746-525c7157-bbdc-466a-9d4b-d8fa5b84f24e.gif' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-525c7157-bbdc-466a-9d4b-d8fa5b84f24e.gif' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-525c7157-bbdc-466a-9d4b-d8fa5b84f24e.gif' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--radius:var(--g-radius-none);border-radius:inherit"
+  />
+      </div>
+  </div><div
+    
+    role="presentation"
+    class="group/image gkVnpuxlpU"
+    style="--mb:var(--g-s-l);--mb-mobile:auto;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-11cd0083-f69a-42c8-af24-c79c2a131528.gif" | asset_url }}" data-srcset="{{ '503512329267184746-11cd0083-f69a-42c8-af24-c79c2a131528.gif' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-11cd0083-f69a-42c8-af24-c79c2a131528.gif' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-11cd0083-f69a-42c8-af24-c79c2a131528.gif' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--radius:var(--g-radius-none);border-radius:inherit"
+  />
+      </div>
+  </div><div
+    
+    role="presentation"
+    class="group/image ghQcKXDn4q"
+    style="--mb:var(--g-s-l);--mb-mobile:auto;--d:block;--d-tablet:block;--d-mobile:block;--b:solid;--bc:#121212;--bw:0px;--radius:var(--g-radius-none);--shadow:none;--op:100%;--animation:[object Object];--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full"
+        
+        class="h-full w-full"
+        style="--shadow:none;border-radius:inherit;--ta:center"
+      >
+        <img
+    quality="70" title
+    draggable="false"
+    class="!inline h-full max-w-full flex gp_lazyload"
+    data-src="{{ "503512329267184746-301234a5-b887-4729-9d03-93255fa87191.png" | asset_url }}" data-srcset="{{ '503512329267184746-301234a5-b887-4729-9d03-93255fa87191.png' | asset_img_url: '768x768' }} 768w, {{ '503512329267184746-301234a5-b887-4729-9d03-93255fa87191.png' | asset_img_url: '1024x1024' }} 1024w, {{ '503512329267184746-301234a5-b887-4729-9d03-93255fa87191.png' | asset_img_url: 'master' }} 1440w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+Pr1638ACaED3/nOThIAAAAASUVORK5CYII=" width height alt="Alt image" priority base-src
+    sizes="100vw"
+    style="--aspect:0/0;--aspect-tablet:0/0;--aspect-mobile:0/0;--objf:cover;--w-mobile:100%;--h:auto;--h-tablet:auto;--h-mobile:auto;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--radius:var(--g-radius-none);border-radius:inherit"
+  />
+      </div>
+  </div>
+    </div>
+    </div>
+  
+    
+    </div>
+    </div>
+  
+    
+    </div>
+    </div>
+  
+    
+    </div>
+    </div>
+  
+            </section>
+          
+    
+{% schema %}
+  {
+    
+    "name": "Section 1",
+    "tag": "section",
+    "class": "gps-503521575207699335 gps gpsi",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/0de42a-2/apps/bold/app/shopify/edit?pageType=GP_PRODUCT&editorId=503521546233447530&sectionId=503521575207699335)"
+      }
+    ],
+    "blocks": [{"type": "@app"}]
+  }
+{% endschema %}
