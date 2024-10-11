@@ -236,41 +236,41 @@
         "testimonial_YBTCWc": {
           "type": "testimonial",
           "settings": {
-            "testimonial_image": "shopify://shop_images/Beach_SM_0400.webp",
-            "customer_name": "text",
-            "testimonial_text": "text",
-            "likes": 23232323,
-            "comments": 2342342
+            "testimonial_image": "shopify://shop_images/person-tosses-their-hair-away-from-frame.jpg",
+            "customer_name": "Mariana López",
+            "testimonial_text": "\"El envío fue rapidísimo, recibí mi pedido antes de lo esperado. ¡Excelente servicio!\"",
+            "likes": 19,
+            "comments": 14
           }
         },
         "testimonial_FCcYtx": {
           "type": "testimonial",
           "settings": {
-            "testimonial_image": "shopify://shop_images/Beach_SM_0400.webp",
-            "customer_name": "text",
-            "testimonial_text": "text",
-            "likes": 23232323,
-            "comments": 2342342
+            "testimonial_image": "shopify://shop_images/couple-laugh-while-in-the-park.jpg",
+            "customer_name": "Carlos Fernández",
+            "testimonial_text": "\"Pedido excelente y llegó en un abrir y cerrar de ojos. Muy satisfecho con la rapidez del envío.\"",
+            "likes": 226,
+            "comments": 2
           }
         },
         "testimonial_wkQwzc": {
           "type": "testimonial",
           "settings": {
             "testimonial_image": "shopify://shop_images/Beach_SM_0400.webp",
-            "customer_name": "text",
-            "testimonial_text": "text",
-            "likes": 23232323,
-            "comments": 2342342
+            "customer_name": "Lucía Martínez",
+            "testimonial_text": "\"¡Impresionante! Recibí mi paquete super rápido. El servicio fue inigualable.\"",
+            "likes": 212,
+            "comments": 11
           }
         },
         "testimonial_QtpdTq": {
           "type": "testimonial",
           "settings": {
             "testimonial_image": "shopify://shop_images/Beach_SM_0400.webp",
-            "customer_name": "text",
-            "testimonial_text": "text",
-            "likes": 23232323,
-            "comments": 2342342
+            "customer_name": "Juan Pérez",
+            "testimonial_text": "\"El pedido llegó mucho más rápido de lo que pensé. ¡Muy buen trabajo!\"",
+            "likes": 122,
+            "comments": 21
           }
         }
       },

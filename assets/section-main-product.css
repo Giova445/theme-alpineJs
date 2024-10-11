@@ -414,7 +414,7 @@ a.product__text {
   }
 
   .product__media-list .product__media-item {
-    width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing));
+    width: 100%;
   }
 
   .product--mobile-columns .product__media-item {
@@ -969,7 +969,7 @@ a.product__text {
   }
 
   .thumbnail-slider {
-    display: flex;
+    display: none;
     align-items: center;
   }
 
